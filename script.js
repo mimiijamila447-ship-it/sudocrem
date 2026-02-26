@@ -474,4 +474,44 @@ document.addEventListener('DOMContentLoaded', () => {
         closeButton.addEventListener('click', toggleContact);
     }
 
+    /* =======================================
+       16. UGC VIDEO PLAYER LOGIC (MULTIPLE)
+    ======================================== */
+    const ugcContainers = document.querySelectorAll('.video-container');
+    const allCustomVideos = document.querySelectorAll('.custom-video');
+
+    // Ensure only one video can play at a time
+    allCustomVideos.forEach(video => {
+        video.addEventListener('play', () => {
+            allCustomVideos.forEach(otherVideo => {
+                if (otherVideo !== video) {
+                    otherVideo.pause();
+                }
+            });
+        });
+    });
+
+    ugcContainers.forEach(container => {
+        const poster = container.querySelector('.video-poster');
+        const playBtn = container.querySelector('.play-overlay');
+        const videoPlayer = container.querySelector('.custom-video');
+
+        if (videoPlayer) {
+            container.addEventListener('click', () => {
+                // Hide poster and play button for this specific video
+                if (poster) poster.style.display = 'none';
+                if (playBtn) playBtn.style.display = 'none';
+
+                // Show video and play
+                videoPlayer.style.display = 'block';
+
+                if (videoPlayer.src && !videoPlayer.src.endsWith('index.html')) {
+                    videoPlayer.play().catch(e => console.log('Video play error:', e));
+                } else {
+                    alert('الرجاء إضافة رابط الفيديو في الكود (src="video.mp4") لتشغيله.');
+                }
+            });
+        }
+    });
+
 });
