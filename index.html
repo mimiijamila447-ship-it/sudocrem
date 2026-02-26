@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SudoCrem Tunisie - الحل السحري لبشرتك</title>
+    <!-- Keep Outfit Font but use it in a cleaner, e-commerce way -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="highlight">Sudo</span>crem.
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">شوب</a></li>
+                <li><a href="#benefits">المنافع</a></li>
+                <li><a href="#results">النتيجة</a></li>
+                <li><a href="#reviews">آراء الحرفاء</a></li>
+                <li><a href="#faq">سؤال وجواب</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-wrapper">
+        <!-- New Product PDP Section -->
+        <section id="home" class="pdp-section">
+            <div class="pdp-container">
+                <!-- Left Details: Images -->
+                <div class="pdp-gallery animate-on-scroll">
+                    <div class="pdp-thumbnails">
+                        <img src="images/thumb1.png" alt="Sudocrem Main" class="thumb-img active"
+                            data-main="images/thumb1.png">
+                        <img src="images/thumb2.png" alt="Sudocrem Texture" class="thumb-img"
+                            data-main="images/thumb2.png">
+                        <img src="images/thumb3.png" alt="Sudocrem Application" class="thumb-img"
+                            data-main="images/thumb3.png">
+                    </div>
+                    <div class="pdp-main-image magic-glow-card">
+                        <div class="discount-badge">-20% تخفيض</div>
+                        <!-- Added Tilt Wrapper for 3D Effect -->
+                        <div class="tilt-wrapper" id="tiltMain">
+                            <img src="images/sudocrem.png" alt="Sudocrem Box" id="mainImage">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Details: Product Info & Order -->
+                <div class="pdp-details animate-on-scroll stagger-1">
+                    <h2 class="pdp-brand">Sudocrem original Tunisie</h2>
+                    <h1 class="pdp-title">كريم المعجزة لعلاج وحماية البشرة</h1>
+
+                    <div class="pdp-reviews-price">
+                        <div class="pdp-stars-container">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <span class="pdp-review-count">(+2,400 تقييم)</span>
+                        </div>
+                        <div class="pdp-price">
+                            <span class="old-price">95.99 د.ت</span>
+                            <span class="current-price">89.00 د.ت</span>
+                            <span
+                                style="display: block; font-size: 0.9rem; color: #777; margin-top: 5px; font-weight: 500;">+
+                                التوصيل: 8 د.ت</span>
+                        </div>
+                    </div>
+
+                    <div class="magic-banners">
+                        <div class="live-viewers">
+                            <div class="pulse-dot"></div>
+                            <span>فما <strong id="viewer-count">24</strong> شخص قاعدين يشوفو في البرودوي توا</span>
+                        </div>
+                        <div class="delivery-countdown">
+                            <i class="fa-solid fa-truck-fast icon-bounce"></i>
+                            <span>اطلب توا و يوصلك غدوة! يوفى العرض في: <span id="countdown-timer"
+                                    class="flash">04:12:35</span></span>
+                        </div>
+                    </div>
+
+                    <hr class="pdp-divider">
+
+                    <div class="pdp-options-group">
+                        <h3 class="options-title">النوع:</h3>
+                        <div class="btn-group" id="typeGroup">
+                            <button class="option-btn active" data-type="healing">كريم معالج (أحمر)</button>
+                            <!--<button class="option-btn" data-type="protect">حماية وعناية (أزرق)</button>-->
+                        </div>
+                    </div>
+
+                    <div class="pdp-options-group">
+                        <h3 class="options-title">الحجم:</h3>
+                        <div class="btn-group" id="sizeGroup">
+                            <button class="option-btn active" data-price="89.00">60غ / 2oz</button>
+                            <!--<button class="option-btn" data-price="19.99">125غ / 4oz</button>
+                            <button class="option-btn" data-price="26.99">250غ / 8oz</button>-->
+                        </div>
+                    </div>
+
+                    <div class="pdp-actions">
+                        <div class="pdp-qty">
+                            <input type="number" id="pdp-qty-input" value="1" min="1" max="10" readonly>
+                            <div class="pdp-qty-arrows">
+                                <button id="pdp-qty-up"><i class="fa-solid fa-chevron-up"></i></button>
+                                <button id="pdp-qty-down"><i class="fa-solid fa-chevron-down"></i></button>
+                            </div>
+                        </div>
+                        <button class="pdp-add-btn" id="openCheckoutBtn">
+                            <i class="fa-solid fa-cart-shopping" style="margin-right: 8px;"></i> اطلب توا
+                        </button>
+                        <button class="pdp-wishlist-btn" id="wishlistBtn"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+
+                    <div class="trust-badges-container">
+                        <div class="trust-badge"><i class="fa-solid fa-shield-halved"></i> <span>دفع آمن عند
+                                الاستلام</span>
+                        </div>
+                        <div class="trust-badge"><i class="fa-solid fa-box-open"></i> <span>توصيل سريع لكل تونس</span>
+                        </div>
+                        <div class="trust-badge"><i class="fa-solid fa-certificate"></i> <span>100% أوريجينال</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Counter Section -->
+        <section id="stats" class="stats-section animate-on-scroll">
+            <div class="stats-grid">
+                <div class="stat-item magic-glow-card">
+                    <div class="stat-number" data-target="90" data-plus="true">0</div>
+                    <div class="stat-label">سنة من الخبرة</div>
+                </div>
+                <div class="stat-item magic-glow-card">
+                    <div class="stat-number" data-target="35" data-plus="false">0</div>
+                    <div class="stat-label">دولة يتباع فيها</div>
+                </div>
+                <div class="stat-item magic-glow-card">
+                    <div class="stat-number" data-target="98" data-percent="true">0</div>
+                    <div class="stat-label">رضا الحرفاء</div>
+                </div>
+                <div class="stat-item magic-glow-card">
+                    <div class="stat-number" data-target="2" data-plus="true">0</div>
+                    <div class="stat-label">مليون أم يثقو فيه</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section id="benefits" class="info-section bg-light">
+            <div class="section-container">
+                <span class="section-subtitle">علاش تختار Sudocrem؟</span>
+                <h2 class="section-title animate-on-scroll">الكريم السحري الي لازم يكون في أي دار</h2>
+                <div class="desc-content animate-on-scroll stagger-1">سودو كريم هو الكريم الامريكي عامل ضجة عند الأجانب
+                    و العرب لنتايجه الهائلة في تفتييح الوجه و اي بلاصة غامقة في بدنك
+                    ينحي تاشات و الكلف و زيد ضربة ضربة لحب الشباب</p>
+                    <div class="benefits-grid">
+                        <div class="benefit-card magic-glow-card animate-on-scroll">
+                            <i class="fa-solid fa-sparkles benefit-icon" style="color: var(--primary-gold);"></i>
+                            <h4>تبييض شامل</h4>
+                            <p>يبيض الوجه و البدن الكل.</p>
+                        </div>
+                        <div class="benefit-card magic-glow-card animate-on-scroll stagger-1">
+                            <i class="fa-solid fa-droplet-slash benefit-icon" style="color: var(--primary-red);"></i>
+                            <h4>تصفية البشرة</h4>
+                            <p>ينحي تاشات و الكلف.</p>
+                        </div>
+                        <div class="benefit-card magic-glow-card animate-on-scroll stagger-2">
+                            <i class="fa-solid fa-face-smile benefit-icon" style="color: var(--primary-gold);"></i>
+                            <h4>علاج الحبوب</h4>
+                            <p>يقضي حب الشباب.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MULTI-TAB BEFORE & AFTER SECTION -->
+        <section id="results" class="info-section">
+            <div class="section-container">
+                <span class="section-subtitle">النتيجة بالعين</span>
+                <h2 class="section-title animate-on-scroll">تأثير ملحوظ مالجمعة الأولى</h2>
+
+                <div class="ba-tabs animate-on-scroll stagger-1">
+                    <button class="ba-tab-btn active" data-target="case-1">حب الشباب (Acne)</button>
+                    <button class="ba-tab-btn" data-target="case-2">تصبغات (Dark Spots)</button>
+                    <button class="ba-tab-btn" data-target="case-3">نضارة (Glow Up)</button>
+                    <!--<button class="ba-tab-btn" data-target="case-4">الاكزيما والاحمرار</button>-->
+                </div>
+
+                <div class="ba-content-wrapper animate-on-scroll stagger-2">
+
+                    <!-- TAB 1: Acne -->
+                    <div class="ba-container active" id="case-1">
+                        <div class="ba-card magic-glow-card">
+                            <div class="ba-image">
+                                <img src="images/acne_before.png" alt="Acne Before">
+                                <span class="ba-label label-before">قبل الاستعمال</span>
+                            </div>
+                            <div class="ba-text">
+                                <h4>حبوب ملتهبة</h4>
+                                <p>احمرار وتهيج قوي.</p>
+                            </div>
+                        </div>
+                        <div class="ba-divider"><span><i class="fa-solid fa-arrow-left"></i></span></div>
+                        <div class="ba-card magic-glow-card premium-border">
+                            <div class="ba-image">
+                                <img src="images/acne_after.png" alt="Acne After">
+                                <span class="ba-label label-after">بعد 5 أيام</span>
+                            </div>
+                            <div class="ba-text">
+                                <h4>بشرة صافية</h4>
+                                <p>الحبوب شاحت والاحمرار تنحى تماما.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TAB 2: Dark Spots -->
+                    <div class="ba-container" id="case-2">
+                        <div class="ba-card magic-glow-card">
+                            <div class="ba-image">
+                                <img src="images/spots_before.png" alt="Spots Before">
+                                <span class="ba-label label-before">قبل الاستعمال</span>
+                            </div>
+                            <div class="ba-text">
+                                <h4>تصبغات عميقة</h4>
+                                <p>كلف وآثار حبوب قديمة.</p>
+                            </div>
+                        </div>
+                        <div class="ba-divider"><span><i class="fa-solid fa-arrow-left"></i></span></div>
+                        <div class="ba-card magic-glow-card premium-border">
+                            <div class="ba-image">
+                                <img src="images/spots_after.png" alt="Spots After">
+                                <span class="ba-label label-after">بعد شهرين</span>
+                            </div>
+                            <div class="ba-text">
+                                <h4>تفييح ملحوظ</h4>
+                                <p>البقع بهاتت واللون ولى موحد.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TAB 3: Glow up -->
+                    <div class="ba-container" id="case-3">
+                        <div class="ba-card magic-glow-card">
+                            <div class="ba-image">
+                                <img src="images/glow_before.png" alt="Glow Before">
+                                <span class="ba-label label-before">قبل الاستعمال</span>
+                            </div>
+                            <div class="ba-text">
+                                <h4>بشرة شايحة و باهتة</h4>
+                                <p>جفاف قوي وقلة ترطيب.</p>
+                            </div>
+                        </div>
+                        <div class="ba-divider"><span><i class="fa-solid fa-arrow-left"></i></span></div>
+                        <div class="ba-card magic-glow-card premium-border">
+                            <div class="ba-image">
+                                <img src="images/glow_after.png" alt="Glow After">
+                                <span class="ba-label label-after">بعد جمعتين</span>
+                            </div>
+                            <div class="ba-text">
+                                <h4>Glass Skin</h4>
+                                <p>ترطيب عميق و نضارة تخطف العين.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TAB 4: Original Skin -->
+                    <div class="ba-container" id="case-4">
+                        <div class="ba-card magic-glow-card">
+                            <div class="ba-image">
+                                <img src="images/before.png" alt="Skin Before">
+                                <span class="ba-label label-before">قبل الاستعمال</span>
+                            </div>
+                        </div>
+                        <div class="ba-divider"><span><i class="fa-solid fa-arrow-left"></i></span></div>
+                        <div class="ba-card magic-glow-card premium-border">
+                            <div class="ba-image">
+                                <img src="images/after.png" alt="Skin After">
+                                <span class="ba-label label-after">بعد يومين</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Verified Reviews Section -->
+        <section id="reviews" class="info-section bg-light">
+            <div class="section-container">
+                <span class="section-subtitle">آراء التوانسة</span>
+                <h2 class="section-title animate-on-scroll">الآلاف جربوه و شكروه</h2>
+                <div class="reviews-grid">
+                    <div class="review-card magic-glow-card animate-on-scroll">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">"يعطيكم الصحة! كنت نعاني من آثار الحبوب السودة، جربت Sudocrem شهر كامل كل
+                            ليلة، النتيجة خيالية، وجهي صفى بالباهي."</p>
+                        <div class="reviewer">
+                            <img src="images/customer1.png" alt="Customer" class="reviewer-img">
+                            <div class="reviewer-info">
+                                <strong>مريم ع.</strong>
+                                <span>تونس العاصمة | حريف مؤكد</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card magic-glow-card animate-on-scroll stagger-1">
+                        <div class="stars">★★★★★</div>
+                        <p class="review-text">"روعة للبشرة! استعملتو كل ليلة قبل ما نرقد، وجهي ولا بلارة وتاشات تنحاو
+                            جملة. بصراحة احسن حاجة جربتها لتو."</p>
+                        <div class="reviewer">
+                            <img src="images/customer2.png" alt="Customer" class="reviewer-img">
+                            <div class="reviewer-info">
+                                <strong>ألفة م.</strong>
+                                <span>سوسة | حريف مؤكد</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-card magic-glow-card animate-on-scroll stagger-2">
+                        <div class="stars">★★★★☆</div>
+                        <p class="review-text">"للتراس متع الحرقان في الكوجينة سحري بالرسمي. اما ماذا بيك تحط طبقة جويدة
+                            علخر في الوجه باش ميزيتش. يعطيه الصحة اللي اخترعو."</p>
+                        <div class="reviewer">
+                            <img src="images/customer3.png" alt="Customer" class="reviewer-img">
+                            <div class="reviewer-info">
+                                <strong>سناء ب.</strong>
+                                <span>صفاقس | حريف مؤكد</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="info-section">
+            <div class="section-container faq-container">
+                <div class="text-center">
+                    <span class="section-subtitle">عندك سؤال؟</span>
+                    <h2 class="section-title animate-on-scroll">أكثر الأسئلة اللي تجينا</h2>
+                </div>
+                <div class="accordion animate-on-scroll stagger-1">
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            هل Sudocrem يصلح للوجه والشمس؟
+                            <i class="fa-solid fa-plus accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <br>
+                            يصلح للوجه ولعلاج الحبوب والآثار، لكن منصحوش بيه كـ "Ecran", يفضل استعماله فالليل كعلاج،
+                            وفي النهار تغسل وجهك وتعمل إيكران عادي.
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            قداه يقعد باش يوصلني الكومند؟
+                            <i class="fa-solid fa-plus accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <br>
+                            التوصيل فوري لجميع ولايات الجمهورية التونسية! يشد من 24 لـ 48 ساعة ويجيك الليفرور لباب
+                            الدار، وتخلص كان كي تستلم قضيتك.
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            كيفاش نستعملو لآثار الحبوب؟
+                            <i class="fa-solid fa-plus accordion-icon"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <br>
+                            بعد ما تغسل وجهك بالصابون فالليل، خوذ نكتة صغيرة علخر وصيها على بلاصة الحبة ولا الأثر
+                            وبات باها. الصباح اغسل وجهك وكرر العملية كل ليلة.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sticky Buy Banner for Mobile / Quick Action -->
+        <div
+            style="position: fixed; bottom: 0; right: 0; width: 100%; background: white; padding: 15px 2rem; box-shadow: 0 -5px 15px rgba(0,0,0,0.05); z-index: 999; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--border-color);">
+            <div style="display: flex; flex-direction: column;">
+                <strong style="font-size: 1.1rem;">Sudocrem الاصلي</strong>
+                <span style="color: var(--primary-red); font-weight: 700;">89.00 د.ت كهو!</span>
+            </div>
+            <button class="pdp-add-btn" style="height: 45px; width: auto; padding: 0 2rem; font-size: 1rem;"
+                onclick="document.getElementById('openCheckoutBtn').click();">اطلب الان</button>
+        </div>
+
+        <!-- Modals -->
+        <!-- Checkout Modal -->
+        <div class="modal hidden" id="checkoutModal">
+            <div class="checkout-modal-content">
+                <div class="modal-header">
+                    <h2>أكمل طلبك</h2>
+                    <button class="close-modal-btn" id="closeCheckout">&times;</button>
+                </div>
+
+                <div class="order-summary-box">
+                    <img src="images/sudocrem.png" alt="Product"
+                        style="width: 50px; height: 50px; object-fit: contain;">
+                    <div class="summary-details">
+                        <strong id="checkout-title">كريم معالج (60غ)</strong>
+                        <span style="color:#777; font-size:0.8rem;">الكمية: <span id="checkout-qty">1</span></span>
+                    </div>
+                    <div class="summary-price" id="checkout-total">89.00 د.ت</div>
+                </div>
+
+                <form class="checkout-form" id="orderForm">
+                    <div class="input-group">
+                        <label>الاسم واللقب</label>
+                        <input type="text" id="fullName" placeholder="اكتب اسمك الكامل" required>
+                    </div>
+                    <div class="input-group">
+                        <label>رقم الهاتف</label>
+                        <input type="tel" id="phone" placeholder="مثال: 50 939 326" required>
+                    </div>
+                    <div class="input-group">
+                        <label>الولاية</label>
+                        <input type="text" id="state" placeholder="وين تسكن توا" required>
+                    </div>
+                    <div class="input-group">
+                        <label>العنوان بالتفصيل</label>
+                        <textarea id="address" rows="2" placeholder="اكتب عنوانك بالكامل لتسهيل التوصيل"
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="full-width-btn" id="submitOrderBtn" style="margin-top: 10px;">
+                        <span class="btn-text">تأكيد الطلب والدفع عند الاستلام</span>
+                        <div class="loader hidden"></div>
+                    </button>
+                    <div class="secure-checkout mt-2">
+                        <i class="fa-solid fa-lock" style="color: #4CAF50;"></i> معلوماتك سرية ومحمية
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Success Modal -->
+        <div class="modal hidden" id="successModal">
+            <div class="checkout-modal-content" style="text-align: center; max-width: 400px; padding: 3rem 2rem;">
+                <div class="success-icon"></div>
+                <h2 style="font-size: 1.8rem; margin-bottom: 1rem;">يعطيك الصحة!</h2>
+                <p style="color: #666; margin-bottom: 2rem; line-height: 1.6;">سجلنا الكوماند متاعك بنجاح. باش يكلمك
+                    فريقنا في أقرب وقت لتأكيد الطلب.</p>
+                <button class="full-width-btn" id="closeSuccess">ارجع للموقع</button>
+            </div>
+        </div>
+
+        <div style="padding-bottom: 80px;">
+            <footer style="text-align: center; padding: 3rem; background: var(--text-main); color: white;">
+                <p>&copy; 2026 PharmaHealth Direct. جميع الحقوق محفوظة.</p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Floating Contact Widget -->
+    <div class="floating-contact-wrapper">
+        <div class="contact-options" id="contactOptions">
+            <a href="https://wa.me/21650939326" target="_blank" class="contact-option whatsapp-option">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="tel:+21650939326" class="contact-option call-option">
+                <i class="fas fa-phone"></i>
+            </a>
+        </div>
+        <div class="contact-toggle-container" id="contactToggleContainer">
+            <div class="contact-button" id="contactButton">
+                <i class="fas fa-comment-dots"></i>
+            </div>
+            <div class="close-button" id="closeButton">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Live Sales Notifications (JS generated) -->
+    <div id="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
