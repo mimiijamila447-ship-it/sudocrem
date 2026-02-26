@@ -427,7 +427,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             // 🔹 Step 3: Send data to Google Sheets
-            const response = await fetch("https://script.google.com/macros/s/AKfycbx73uqReBrKj0MzSbs1_nZOR1VigcFy62OyUAk0c4LnLUzC2Mamkh3zzdhpRLHMGVnevA/exec", {
+            const response = await fetch("https://script.google.com/macros/s/AKfycbz770a2sRsI1LaUXeI_XRYpskfEYUmv7al2reHfzllptRW0c39oZUPh5uJGd_LYfXqgCA/exec", {
                 method: "POST",
                 mode: "no-cors", // Prevents CORS preflight errors from Google Apps Script
                 headers: {
