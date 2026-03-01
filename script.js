@@ -391,7 +391,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function populateModal() {
         document.getElementById('checkout-title').innerText = `${state.type} (${state.size})`;
         document.getElementById('checkout-qty').innerText = state.quantity;
-        document.getElementById('checkout-total').innerText = (state.price * state.quantity).toFixed(2) + ' د.ت';
+        document.getElementById('checkout-total').innerText = ((state.price * state.quantity) + 8).toFixed(2) + ' د.ت';
     }
 
     openCheckoutBtn.addEventListener('click', () => {
@@ -414,6 +414,7 @@ document.addEventListener('DOMContentLoaded', () => {
             address: document.getElementById('address').value,
             product: `${state.type} (${state.size})`,
             quantity: state.quantity,
+            livraison: '8 د.ت',
             totalPrice: ((state.price * state.quantity) + 8).toFixed(2) + ' د.ت'
         };
 
@@ -515,4 +516,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
-
