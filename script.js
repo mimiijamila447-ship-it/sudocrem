@@ -414,7 +414,7 @@ document.addEventListener('DOMContentLoaded', () => {
             address: document.getElementById('address').value,
             product: `${state.type} (${state.size})`,
             quantity: state.quantity,
-            totalPrice: (state.price * state.quantity).toFixed(2) + ' د.ت'
+            totalPrice: ((state.price * state.quantity) + 8).toFixed(2) + ' د.ت'
         };
 
         // Show Loading state
@@ -515,3 +515,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
