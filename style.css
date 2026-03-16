@@ -146,18 +146,46 @@ body {
     perspective: 1000px;
 }
 
-.discount-badge {
+.eid-promo-badge {
     position: absolute;
     top: 20px;
     left: 20px;
-    /* Swapped right to left for RTL */
-    background: #b8955b;
-    color: white;
-    padding: 0.3rem 0.8rem;
-    border-radius: 4px;
-    font-weight: 600;
-    font-size: 0.9rem;
+    background: linear-gradient(135deg, #FFD700, #b8955b);
+    color: #111;
+    padding: 0.5rem 1.2rem;
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: 0.95rem;
     z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 0 15px rgba(184, 149, 91, 0.6);
+    animation: promoPulse 2s infinite ease-in-out;
+    border: 1px solid rgba(255,255,255,0.4);
+}
+
+.eid-promo-badge i {
+    font-size: 1.1rem;
+}
+
+@keyframes promoPulse {
+    0% { transform: scale(1); box-shadow: 0 0 15px rgba(184, 149, 91, 0.6); }
+    50% { transform: scale(1.05); box-shadow: 0 0 25px rgba(184, 149, 91, 0.9); }
+    100% { transform: scale(1); box-shadow: 0 0 15px rgba(184, 149, 91, 0.6); }
+}
+
+.eid-price-tag {
+    background: rgba(184, 149, 91, 0.15);
+    color: #b8955b;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid rgba(184, 149, 91, 0.3);
 }
 
 /* Interactive 3D Tilt Wrapper */
@@ -235,6 +263,7 @@ body {
     display: flex;
     align-items: center;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 .current-price {
