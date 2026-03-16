@@ -1441,6 +1441,34 @@ body {
     }
 }
 
+/* Sticky CTA Banner Base Styles */
+.sticky-cta-banner {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background: white;
+    padding: 15px 2rem;
+    box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border-color);
+}
+
+.sticky-price {
+    color: var(--primary-red);
+    font-weight: 700;
+}
+
+.sticky-btn {
+    height: 45px;
+    width: auto;
+    padding: 0 2rem;
+    font-size: 1rem;
+}
+
 @media (max-width: 768px) {
     body {
         padding-top: 70px;
@@ -1527,16 +1555,29 @@ body {
     }
 
     .pdp-title {
-        font-size: 1.3rem;
+        font-size: 1.25rem; /* Reduced to avoid clip on 375px */
         margin-bottom: 1rem;
+        word-break: break-word; /* Prevent overflow */
+        padding: 0 15px; /* Add more breathing room to prevent edge clipping */
     }
 
     .pdp-brand {
-        font-size: 1.5rem;
+        font-size: 1.2rem; /* Reduced to avoid clip on 375px */
+        word-break: break-word; /* Prevent overflow */
+    }
+
+    .pdp-reviews-price {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .pdp-stars-container {
+        flex-wrap: wrap; /* allow stars to wrap if really tight */
     }
 
     .current-price {
-        font-size: 1.6rem;
+        font-size: 1.5rem; /* Scaled down slightly */
     }
 
     .old-price {
@@ -1665,10 +1706,10 @@ body {
 
     .checkout-modal-content {
         padding: 1.5rem;
-        padding-bottom: 2.5rem;
+        padding-bottom: 4rem; /* Additional space at bottom */
         margin: 10px;
         width: calc(100% - 20px);
-        max-height: 90vh;
+        max-height: 85vh; /* slightly less than 90 to ensure scroll space */
         overflow-y: auto;
     }
 
@@ -1682,11 +1723,12 @@ body {
     }
 
     #toast-container {
-        bottom: 15px;
+        bottom: 75px; /* Above the sticky footer */
         left: 15px;
         right: 15px;
         pointer-events: none;
         align-items: center;
+        z-index: 2900; /* Ensure this is below the modal (z-index 3000) */
     }
 
     .toast {
@@ -1697,9 +1739,22 @@ body {
     }
 
     .floating-contact-wrapper {
-        bottom: 15px;
-        right: 15px;
-        transform: scale(0.85);
+        bottom: 165px; /* Above the toast */
+        right: 10px;
+        transform: scale(0.65); /* Shrink significantly to prevent UI clash */
         transform-origin: bottom right;
+    }
+
+    .sticky-cta-banner {
+        padding: 5px 1rem; /* Reduced vertical padding */
+    }
+
+    .sticky-btn {
+        padding: 0 1rem;
+        font-size: 0.85rem;
+    }
+
+    .sticky-price {
+        font-size: 0.85rem;
     }
 }
