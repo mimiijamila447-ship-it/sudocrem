@@ -1,6 +1,6 @@
 :root {
-    --primary-red: #E63946;
-    --primary-red-hover: #D62828;
+    --primary-red: #D62828;
+    --primary-red-hover: #C52835;
     --primary-gold: #cfaa6b;
     --hover-gold: #b8955b;
     --bg-color: #F8F9FA;
@@ -274,7 +274,7 @@ body {
 
 .old-price {
     font-size: 1rem;
-    color: #999;
+    color: #767676;
     text-decoration: line-through;
     font-weight: 600;
 }
@@ -415,7 +415,7 @@ body {
 
 .option-btn.active {
     border-color: var(--primary-gold);
-    color: var(--primary-gold);
+    color: #9b7a42;
     font-weight: 700;
     /* Bolder for Arabic */
     background: rgba(206, 170, 107, 0.05);
@@ -672,7 +672,7 @@ body {
 }
 
 .section-subtitle {
-    color: var(--primary-gold);
+    color: #9b7a42;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2px;

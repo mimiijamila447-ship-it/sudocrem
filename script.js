@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const toast = document.createElement('div');
         toast.className = 'toast';
         toast.innerHTML = `
-            <img src="images/sudocrem.png" alt="Sudocrem" class="toast-img">
+            <img loading="lazy" src="images/sudocrem.webp" alt="Sudocrem" class="toast-img">
             <div>
                 <strong style="color:var(--text-main); font-size:0.9rem;">${randomNotif.name} من ${randomNotif.location}</strong>
                 <p style="color:var(--text-muted); font-size:0.8rem; margin-top:2px;">شرات Sudocrem (60غ) - <i>${randomNotif.time}</i></p>
@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         docStyle.setProperty('--hover-gold', '#357ABD');
                         docStyle.setProperty('--primary-red', '#FFB703');
 
-                        document.getElementById('mainImage').src = 'images/care_protect.png';
+                        document.getElementById('mainImage').src = 'images/care_protect.webp';
                         document.querySelector('.pdp-brand').style.color = '#4A90E2';
                     } else {
                         // Healing Cream Theme (Gold & Red)
@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         docStyle.setProperty('--hover-gold', '#b8955b');
                         docStyle.setProperty('--primary-red', '#E63946');
 
-                        document.getElementById('mainImage').src = 'images/sudocrem.png';
+                        document.getElementById('mainImage').src = 'images/sudocrem.webp';
                         document.querySelector('.pdp-brand').style.color = '#111';
                     }
                 }
